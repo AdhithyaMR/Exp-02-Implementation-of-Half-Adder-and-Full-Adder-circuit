@@ -1,6 +1,3 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
-
-# Implementation-of-Half-Adder-and-Full-Adder-circuit
 ### AIM:
 To design a half adder and full adder circuit and verify its truth table in Quartus using Verilog programming.
 
@@ -36,19 +33,71 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
+ 
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
+```
+HALF ADDER  
+
+module HalfAdder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule  
+
+FULL ADDER  
+
+module FullAdder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b)|(b&c)|(c&a));
+endmodule 
+```
+
+Developed by: M.ABINAYA
+RegisterNumber:  22008642
+
+Logic symbol
+
+
+![Screenshot (8)](https://user-images.githubusercontent.com/121557017/211144326-1577e59c-846f-4c49-8ca5-c8ef6e6fe8e6.png)
+
+
 RTL realization
 
-### Output:
-### RTL
-### TIMING DIAGRAM
+ Output:
+ 
+ HALFAADER
+  
+ ![Screenshot (1)](https://user-images.githubusercontent.com/121557017/211144407-20f20114-731f-4bf7-941f-d9c71c1938c2.png)
 
 
-### TRUTH TABLE 
+FULLADDER
 
-### Result:
+![Screenshot (2)](https://user-images.githubusercontent.com/121557017/211144284-aaa660c1-6d8f-41db-b6e1-ee6f4af68420.png)
+
+ 
+ RTL
+ TIMING DIAGRAM
+
+HALFADDER
+![Screenshot (11)](https://user-images.githubusercontent.com/121557017/211144550-2a30a7d3-ec8f-43bd-bcfe-033d28603e56.png)
+
+FULLADDER
+
+![Screenshot (13)](https://user-images.githubusercontent.com/121557017/211144645-274f8455-3fad-4f94-bd23-a480404e71da.png)
+
+TRUTH TABLE 
+
+HALFADDER
+
+![Screenshot (9)](https://user-images.githubusercontent.com/121557017/211144749-1be6a19e-cce0-4a0a-ba9d-8a9002825425.png)
+
+
+FULLADDER
+
+![Screenshot (12)](https://user-images.githubusercontent.com/121557017/211144794-f2431619-1b89-4e89-bf9f-83a53f9e9704.png)
+
+ Result:
+     Thus the Implementation of Halfadder Fulladder Circuit are studied and the truthtable for different logic gates are verified
