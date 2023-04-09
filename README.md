@@ -99,5 +99,7 @@ FULLADDER
 
 ![Screenshot (12)](https://user-images.githubusercontent.com/121557017/211144794-f2431619-1b89-4e89-bf9f-83a53f9e9704.png)
 
+```
+
  Result:
      Thus the Implementation of Halfadder Fulladder Circuit are studied and the truthtable for different logic gates are verified
